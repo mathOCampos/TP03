@@ -40,6 +40,7 @@ public class View extends JFrame implements ActionListener {
             f.setSize(300,300);
             f.setLayout(new GridLayout(6,4));  
             
+            //ADICIONANDO COMPONENTES NO FRAME
             f.add(textFieldInput);
             f.add(btn7);
             f.add(btn8);
@@ -62,6 +63,8 @@ public class View extends JFrame implements ActionListener {
         
             f.setVisible(true);
             
+            Calcular c = new Calcular();
+            //CRIANDO EVENTOS DOS JBUTTONS
             btn0.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 textFieldInput.setText(textFieldInput.getText()+"0");
@@ -79,43 +82,62 @@ public class View extends JFrame implements ActionListener {
         });
             btn3.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textFieldInput.setText(textFieldInput.getText()+"2");
+                textFieldInput.setText(textFieldInput.getText()+"3");
             }
         });
             btn4.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textFieldInput.setText(textFieldInput.getText()+"2");
+                textFieldInput.setText(textFieldInput.getText()+"4");
             }
         });
             btn5.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textFieldInput.setText(textFieldInput.getText()+"2");
+                textFieldInput.setText(textFieldInput.getText()+"5");
             }
         });
             btn6.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textFieldInput.setText(textFieldInput.getText()+"2");
+                textFieldInput.setText(textFieldInput.getText()+"6");
             }
         });
             btn7.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textFieldInput.setText(textFieldInput.getText()+"2");
+                textFieldInput.setText(textFieldInput.getText()+"7");
             }
         });
             btn8.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textFieldInput.setText(textFieldInput.getText()+"2");
+                textFieldInput.setText(textFieldInput.getText()+"8");
             }
         });
             btn9.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textFieldInput.setText(textFieldInput.getText()+"2");
+                textFieldInput.setText(textFieldInput.getText()+"9");
             }
         });
             btnSoma.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                int numero1 = Integer.parseInt(textFieldInput.getText());
+                Float numero1 = Float.parseFloat(textFieldInput.getText());
                 textFieldInput.setText(textFieldInput.getText()+"+");
+            }
+        });
+            btnSub.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                Float numero1 = Float.parseFloat(textFieldInput.getText());
+                textFieldInput.setText(textFieldInput.getText()+"-");
+            }
+        });
+            btnMulti.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                Float numero1 = Float.parseFloat(textFieldInput.getText());
+                textFieldInput.setText(textFieldInput.getText()+"*");
+            }
+        });
+            btnDiv.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                Float numero1 = Float.parseFloat(textFieldInput.getText());
+                textFieldInput.setText(textFieldInput.getText()+"/");
+                c.setNumero1(Float.parseFloat(numero1));                
             }
         });
     
