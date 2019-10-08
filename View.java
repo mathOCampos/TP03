@@ -137,7 +137,7 @@ public class View extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 Float numero1 = Float.parseFloat(textFieldInput.getText());
                 textFieldInput.setText(textFieldInput.getText()+"/");
-                c.setNumero1(Float.parseFloat(numero1));                
+                c.setNumero1(Float.parseFloat("numero1"));                
             }
         });
     
